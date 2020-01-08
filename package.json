@@ -1,0 +1,20 @@
+{
+  "name": "happy-lollipop-telegram-bot",
+  "version": "0.0.1",
+  "description": "Telegram bot created for fun",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guzele/happy-lollipop-telegram-bot.git"
+  },
+  "author": "Guzel Garifullina <giseleGarifullina@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-telegram-bot-api": "^0.40.0"
+  }
+}
