@@ -13,11 +13,15 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
-bot.on('message', (msg) => {
-  const name = msg.from.first_name;
-  bot.sendMessage(msg.chat.id, 'Hello, ' + name + '!').then(() => {
-    // reply sent!
-  });
+bot.onText(/\/echo (.+)/, (msg, match) => {
+  const chatId = msg.chat.id;
+  const word = match[1];
+  bot.sendMessage(chatId, word);
+});
+
+bot.onText(/\/ping (.+)/, (msg, match) => {
+  const chatId = msg.chat.id;
+  bot.sendMessage(chatId, "pong");
 });
 
 module.exports = bot;
